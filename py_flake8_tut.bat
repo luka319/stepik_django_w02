@@ -1,0 +1,1 @@
+"W:\[__stepik]\[academy]\django01_платный\week02\_задание_week02_dj\stepik_tours\venv\Scripts\flake8.exe" %*
