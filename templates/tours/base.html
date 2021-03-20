@@ -18,14 +18,16 @@
         <ul class="navbar-nav">
            {#  % for key, value in departures.items() %} #} {# jinja2 #}
            {# % for key, value in departures.items %} #}
-           {% for departure_code, departure in departures %}
+{#           {% for departure_code, departure in departures %}#}
+           {% for departure_code, departure in departures.items %}
               {# li class="nav-item {% if request.path[12:-1] == key %}active{% endif %}"> #}
                <li class="nav-item {% if request.path == key %}active{% endif %}">
 {#               <li class="nav-item active">#}
 {#               <a href="..." class="{% if request.path == link.link %}active{% endif %}">#}
 {#              <li class="nav-item">#}
-                    <a class="nav-link" href="{% url 'by_departure' departure_code %}
-                    data-test="navlink"> {{ departure.name }}</a>
+{#                    <a class="nav-link" href="{% url 'by_departure' departure_code %}#}
+{#                    data-test="navlink"> {{ departure.name }}</a>#}
+                   <a class="nav-link" href="/departures/{{ departure_code }}/">{{ departure }}</a
               </li>
 
           {% endfor %}
