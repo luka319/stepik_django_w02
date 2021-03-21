@@ -25,9 +25,10 @@
 {#               <li class="nav-item active">#}
 {#               <a href="..." class="{% if request.path == link.link %}active{% endif %}">#}
 {#              <li class="nav-item">#}
-{#                    <a class="nav-link" href="{% url 'by_departure' departure_code %}#}
-{#                    data-test="navlink"> {{ departure.name }}</a>#}
-                   <a class="nav-link" href="/departures/{{ departure_code }}/">{{ departure }}</a
+               <a class="nav-link" href="{% url 'by_departure' departure_code %}"
+               data-test="navlink"> {{ departure }}</a>
+{#                   <a class="nav-link" href="/departure/{{ departure_code }}/">{{ departure }}</a>#}
+{#              и верхний с "url" и нижний <a class... работают #}
               </li>
 
           {% endfor %}

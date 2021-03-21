@@ -23,6 +23,6 @@ from tours.views import tour_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_view),
-    path('departure/<str:departure>/', departure_view),
+    path('departure/<str:departure>/', departure_view, name='by_departure'),
     path('tour/<int:id_>/', tour_view),
 ]
