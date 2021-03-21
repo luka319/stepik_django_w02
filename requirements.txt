@@ -3,3 +3,4 @@ Django
 pytz
 sqlparse
 flake8
+gunicorn
